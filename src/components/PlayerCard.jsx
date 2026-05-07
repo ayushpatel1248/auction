@@ -24,7 +24,7 @@ const PlayerCard = ({ player, onBuyerChange }) => {
   const photoUrl = getImageUrl(player['Player Photo']) || defaultAvatar;
 
   return (
-    <div className="w-full h-full flex flex-col md:flex-row items-center justify-center p-8 gap-12">
+    <div className="w-full h-full flex flex-col md:flex-row items-center justify-center p-6 md:p-8 gap-8 md:gap-12">
       {/* Left Column: Player Image & Core Identity */}
       <div className="w-full md:w-5/12 flex flex-col items-center relative">
         <div className="relative group">

@@ -13,7 +13,7 @@ body {
   @apply bg-[#0B0E14] text-white;
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  overflow: hidden; /* We want a full-screen app */
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar */

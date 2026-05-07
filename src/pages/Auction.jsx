@@ -84,14 +84,14 @@ const Auction = () => {
   }
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-[#0B0E14]">
+    <div className="min-h-screen w-full flex flex-col bg-[#0B0E14]">
       <Navbar 
         totalPlayers={filteredPlayers.length} 
         searchTerm={searchTerm} 
         setSearchTerm={setSearchTerm} 
       />
 
-      <div className="flex-1 flex flex-col pt-24 pb-8 px-4 md:px-8 max-w-7xl mx-auto w-full">
+      <div className="flex-1 flex flex-col pt-32 md:pt-24 pb-8 px-4 md:px-8 max-w-7xl mx-auto w-full">
         <Filters activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
 
         <div className="flex-1 mt-8">
@@ -109,10 +109,11 @@ const Auction = () => {
               navigation
               keyboard={{ enabled: true }}
               mousewheel={{ forceToAxis: true }}
-              className="w-full h-full max-h-[80vh]"
+              autoHeight={true}
+              className="w-full"
             >
               {filteredPlayers.map((player) => (
-                <SwiperSlide key={player['Player ID']} className="bg-[#0f141e] rounded-[2rem] border border-white/10 overflow-hidden">
+                <SwiperSlide key={player['Player ID']} className="bg-[#0f141e] rounded-3xl md:rounded-[2rem] border border-white/10 overflow-hidden">
                   <PlayerCard player={player} onBuyerChange={handleBuyerChange} />
                 </SwiperSlide>
               ))}
