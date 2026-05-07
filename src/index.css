@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-navy: #0B0E14;
+  --color-primary-blue: #0047AB;
+  --color-neon-blue: #00F0FF;
+  --color-accent-gold: #FFD700;
+  --color-purple-gradient-start: #4B0082;
+  --color-purple-gradient-end: #1E0033;
+}
+
+body {
+  @apply bg-[#0B0E14] text-white;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden; /* We want a full-screen app */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+.gold-text {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.glow-box {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), inset 0 0 20px rgba(0, 240, 255, 0.05);
+}
